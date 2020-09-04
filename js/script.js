@@ -21,7 +21,7 @@ function tempAlert(msg,duration)
  document.body.appendChild(el);
 }
 
-tempAlert(randomNumber,5000);
+tempAlert(randomNumber,30000);
 
 setTimeout(
   function(){
@@ -29,7 +29,7 @@ setTimeout(
       var userNumber = parseInt(prompt("Inserisci 1 dei 5 numeri che hai visto prima"));
       userArrayNumbers.push(userNumber);
     }
-  },8000);
+  },31000);
 
 
 console.log(randomNumber);
@@ -38,9 +38,15 @@ console.log(userArrayNumbers);
 // RISULTATO
 var equalNumbers = [];
 
-for (i=0; i<5; i++) {
-  if (randomNumber[i] == userArrayNumbers[i]){
-    equalNumbers.push(userArrayNumbers[i]);
-  }
-}
+setTimeout(
+  function(){
+    for (i=0; i<5; i++) {
+      randomNumber.sort();
+      userArrayNumbers.sort();
+      if (randomNumber[i] == userArrayNumbers[i]){
+        equalNumbers.push(userArrayNumbers[i]);
+      }
+    }
+    alert("hai preso" + equalNumbers.length +""+"numeri su 5");
+  },32000);
 console.log(equalNumbers)
