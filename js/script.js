@@ -1,15 +1,8 @@
+// FUNCTIONS
 function numGenerator (min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
-// array vuoto
-var randomNumber = [];
-var userArrayNumbers = [];
-// push 5 numeri in array
-for(i=0; i<5; i++){
- randomNumber.push(numGenerator(1,100)) ;
-}
 
-// espongo i numeri
 function tempAlert(msg,duration)
 {
  var el = document.createElement("div");
@@ -21,8 +14,20 @@ function tempAlert(msg,duration)
  document.body.appendChild(el);
 }
 
+
+// array vuoto
+var randomNumber = [];
+var userArrayNumbers = [];
+// push 5 numeri in array
+for(i=0; i<5; i++){
+ randomNumber.push(numGenerator(1,100)) ;
+}
+
+// espongo i numeri
+
 tempAlert(randomNumber,30000);
 
+// chiedo i numeri
 setTimeout(
   function(){
     for(i=0; i<5; i++) {
